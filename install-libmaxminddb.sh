@@ -12,3 +12,4 @@ ldconfig
 cd /tmp/
 rm libmaxminddb-$LIBMAXMIND_VERSION.tar.gz
 rm -r libmaxminddb-$LIBMAXMIND_VERSION
+ldconfig -p | grep -q libmaxminddb.so

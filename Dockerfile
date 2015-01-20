@@ -13,10 +13,10 @@ COPY install-libmaxminddb.sh /install-libmaxminddb.sh
 # we purge this later to make sure our final image uses what we just built
 RUN apt-get update \
   && apt-get upgrade -y \
-  && apt-get install -y curl wget procps bison ruby bzip2 autoconf gcc build-essential zlib1g-dev libssl-dev libreadline-dev ca-certificates \
+  && apt-get install -y curl wget procps bison ruby bzip2 autoconf gcc build-essential zlib1g-dev libssl-dev libffi-dev libreadline-dev ca-certificates \
   && /install-ruby.sh \
   && /install-libmaxminddb.sh \
-  && apt-get purge -y --auto-remove curl wget bison ruby bzip2 autoconf build-essential zlib1g-dev libssl-dev libreadline-dev \
+  && apt-get purge -y --auto-remove curl wget bison ruby bzip2 autoconf build-essential zlib1g-dev libssl-dev libffi-dev libreadline-dev \
   && rm -rf /var/lib/apt/lists/*
 
 # skip installing gem documentation

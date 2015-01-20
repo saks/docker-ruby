@@ -8,3 +8,4 @@ autoconf
 make -j"$(nproc)"
 make install
 rm -r /usr/src/ruby
+which ruby && which gem
