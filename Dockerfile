@@ -2,9 +2,9 @@ FROM debian:wheezy
 
 MAINTAINER saksmlz <saksmlz@gmail.com>
 
-ENV RUBY_MAJOR 2.1
-ENV RUBY_VERSION 2.1.5
-ENV LIBMAXMIND_VERSION 1.0.3
+ENV RUBY_MAJOR 2.2
+ENV RUBY_VERSION 2.2.0
+ENV LIBMAXMIND_VERSION 1.0.4
 
 COPY install-ruby.sh /install-ruby.sh
 COPY install-libmaxminddb.sh /install-libmaxminddb.sh
