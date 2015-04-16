@@ -13,7 +13,7 @@ COPY install-libmaxminddb.sh /install-libmaxminddb.sh
 # we purge this later to make sure our final image uses what we just built
 RUN apt-get update \
   && apt-get upgrade -y \
-  && apt-get install -y curl wget procps bison ruby bzip2 autoconf gcc build-essential zlib1g-dev \
+  && apt-get install -y curl wget procps make bison ruby bzip2 autoconf gcc build-essential zlib1g-dev \
     libssl-dev libffi-dev libreadline-dev ca-certificates git\
   && /install-ruby.sh \
   && /install-libmaxminddb.sh \
