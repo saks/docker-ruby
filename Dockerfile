@@ -18,7 +18,7 @@ RUN apt-get update \
   && /install-ruby.sh \
   && /install-libmaxminddb.sh \
   && apt-get purge -y --auto-remove curl wget bison ruby bzip2 autoconf build-essential \
-    libssl-dev libffi-dev libreadline-dev \
+    libffi-dev libreadline-dev \
   && rm -rf /var/lib/apt/lists/*
 
 # skip installing gem documentation
